@@ -2,7 +2,7 @@
 
 int main() {
 
-	srand(0);
+	srand(time(0));
 
 	int size = 31;
 
