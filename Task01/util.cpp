@@ -14,12 +14,25 @@ void clear(int* array, int size) {
 	init_random(array, size, 0, 0);
 }
 
+int* create(int size) {
+	if (size <= 0) {
+		return NULL;
+	}
+	return new int[size];
+}
+
+void remove(int* array) {
+	if (array != NULL) {
+		delete[] array;
+	}
+}
+
 string convert(int* array, int size) {
 	string s = "";
 
 	for (int i = 0; i < size; i++)
 	{
-		s += to_string(*(array + i)) + " ";
+		s += to_string(i+1) + ") " + to_string(*(array + i)) + " \n";
 	}
 
 	return s;
